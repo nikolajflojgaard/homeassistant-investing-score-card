@@ -10,6 +10,7 @@ Home Assistant HACS integration for weekly investment ranking and valuation:
 
 ![Dashboard Preview](docs/screenshots/dashboard-modern.svg)
 ![Asset Detail Preview](docs/screenshots/asset-detail-modern.svg)
+![Earnings Popup Preview](docs/screenshots/earnings-popup-modern.svg)
 
 ## Data Model
 

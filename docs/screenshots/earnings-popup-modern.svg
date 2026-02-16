@@ -1,0 +1,33 @@
+<svg width="860" height="1280" viewBox="0 0 860 1280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="860" height="1280" fill="#eef5fa"/>
+  <rect x="42" y="36" width="776" height="82" rx="22" fill="#ffffff" stroke="#dbe6ee"/>
+  <text x="78" y="87" font-family="Arial, sans-serif" font-size="30" fill="#1f2d3d">Earnings Event 2 • Popup</text>
+
+  <rect x="42" y="142" width="776" height="180" rx="22" fill="#ffffff" stroke="#dbe6ee"/>
+  <text x="72" y="194" font-family="Arial, sans-serif" font-size="24" fill="#2a3d52">Event</text>
+  <text x="72" y="238" font-family="Arial, sans-serif" font-size="22" fill="#1f2d3d">Company: Nvidia (NVDA)</text>
+  <text x="72" y="278" font-family="Arial, sans-serif" font-size="22" fill="#1f2d3d">Earnings Date: 2026-02-25</text>
+
+  <rect x="42" y="346" width="776" height="240" rx="22" fill="#ffffff" stroke="#dbe6ee"/>
+  <text x="72" y="398" font-family="Arial, sans-serif" font-size="24" fill="#2a3d52">Valuation Snapshot</text>
+  <text x="72" y="442" font-family="Arial, sans-serif" font-size="21" fill="#1f2d3d">Assessment: Fair</text>
+  <text x="72" y="482" font-family="Arial, sans-serif" font-size="21" fill="#1f2d3d">Price: 182.81 • Fair Price: 192.51</text>
+  <text x="72" y="522" font-family="Arial, sans-serif" font-size="21" fill="#1f2d3d">Model: PE • Ratio: 0.95</text>
+  <text x="72" y="562" font-family="Arial, sans-serif" font-size="21" fill="#1f2d3d">Score: 80.1 (B-)</text>
+
+  <rect x="42" y="610" width="776" height="300" rx="22" fill="#ffffff" stroke="#dbe6ee"/>
+  <text x="72" y="662" font-family="Arial, sans-serif" font-size="24" fill="#2a3d52">Score Components</text>
+  <text x="72" y="706" font-family="Arial, sans-serif" font-size="20" fill="#1f2d3d">Growth Revenue: 15.0</text>
+  <text x="72" y="744" font-family="Arial, sans-serif" font-size="20" fill="#1f2d3d">Growth EPS: 14.1</text>
+  <text x="72" y="782" font-family="Arial, sans-serif" font-size="20" fill="#1f2d3d">Profit Margin Level: 11.2</text>
+  <text x="72" y="820" font-family="Arial, sans-serif" font-size="20" fill="#1f2d3d">Profit Margin YoY: 9.8</text>
+  <text x="72" y="858" font-family="Arial, sans-serif" font-size="20" fill="#1f2d3d">Guidance: 12.0 • Capital: 17.1</text>
+
+  <rect x="42" y="934" width="776" height="300" rx="22" fill="#ffffff" stroke="#dbe6ee"/>
+  <text x="72" y="986" font-family="Arial, sans-serif" font-size="24" fill="#2a3d52">Financial Metrics</text>
+  <text x="72" y="1030" font-family="Arial, sans-serif" font-size="20" fill="#1f2d3d">Revenue YoY: +62.5%</text>
+  <text x="72" y="1068" font-family="Arial, sans-serif" font-size="20" fill="#1f2d3d">EPS YoY: +66.7%</text>
+  <text x="72" y="1106" font-family="Arial, sans-serif" font-size="20" fill="#1f2d3d">Operating Margin: 63.2%</text>
+  <text x="72" y="1144" font-family="Arial, sans-serif" font-size="20" fill="#1f2d3d">FCF YoY: +31.5%</text>
+  <text x="72" y="1182" font-family="Arial, sans-serif" font-size="20" fill="#1f2d3d">Net Debt/EBITDA: 0.07</text>
+</svg>
