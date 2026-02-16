@@ -62,6 +62,17 @@ action:
 mode: single
 ```
 
+## Settings Menu (Customize Tickers)
+
+In the integration options you can choose:
+- `list_mode = default`: your default list (20 companies)  
+- `list_mode = extend`: default list + your custom tickers  
+- `list_mode = custom`: only your custom tickers
+- `custom_tickers`: comma-separated symbols, e.g. `ASML,MSCI,SAP.DE`
+- `include_benchmarks`: include ACWI, S&P 500 and OMXC25
+
+Open: Settings -> Devices & Services -> homeassistant Investing Score Card -> Configure
+
 ## HA Native Styling
 
 This integration is built to follow Home Assistant native UX (no custom applet UI).
@@ -76,6 +87,7 @@ Style goals:
 - light separators and borders
 - clean tile/button layout (native cards only)
 - top opportunities shown as clickable boxes with popup details
+- refresh action in the top header row (right side)
 
 ## Manual Script
 
@@ -83,6 +95,7 @@ Generate a snapshot JSON outside HA:
 
 ```bash
 python3 scripts/update_weekly_snapshot.py --output data/weekly_snapshot.json
+python3 scripts/update_weekly_snapshot.py --list-mode extend --custom-tickers "ASML,MSCI,SAP.DE"
 ```
 
 ## Install

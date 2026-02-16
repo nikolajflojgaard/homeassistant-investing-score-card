@@ -19,7 +19,10 @@
       "init": {
         "title": "Options",
         "data": {
-          "name": "Name"
+          "name": "Name",
+          "list_mode": "List mode (default, extend, custom)",
+          "custom_tickers": "Custom tickers (comma-separated, e.g. ASML,MSCI,SAP.DE)",
+          "include_benchmarks": "Include benchmarks (ACWI, S&P 500, OMXC25)"
         }
       }
     }

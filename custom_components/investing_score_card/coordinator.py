@@ -11,6 +11,14 @@ from homeassistant.core import HomeAssistant
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 
 from .api import InvestingScoreCardApi, InvestingScoreCardApiError
+from .const import (
+    CONF_CUSTOM_TICKERS,
+    CONF_INCLUDE_BENCHMARKS,
+    CONF_LIST_MODE,
+    DEFAULT_CUSTOM_TICKERS,
+    DEFAULT_INCLUDE_BENCHMARKS,
+    DEFAULT_LIST_MODE,
+)
 from .storage import InvestingScoreCardStore
 
 _LOGGER = logging.getLogger(__name__)
@@ -21,7 +29,18 @@ class InvestingScoreCardCoordinator(DataUpdateCoordinator[dict[str, Any]]):
 
     def __init__(self, hass: HomeAssistant, entry: ConfigEntry) -> None:
         self.entry = entry
-        self.api = InvestingScoreCardApi(hass)
+        settings = {
+            CONF_LIST_MODE: entry.options.get(CONF_LIST_MODE, entry.data.get(CONF_LIST_MODE, DEFAULT_LIST_MODE)),
+            CONF_CUSTOM_TICKERS: entry.options.get(
+                CONF_CUSTOM_TICKERS,
+                entry.data.get(CONF_CUSTOM_TICKERS, DEFAULT_CUSTOM_TICKERS),
+            ),
+            CONF_INCLUDE_BENCHMARKS: entry.options.get(
+                CONF_INCLUDE_BENCHMARKS,
+                entry.data.get(CONF_INCLUDE_BENCHMARKS, DEFAULT_INCLUDE_BENCHMARKS),
+            ),
+        }
+        self.api = InvestingScoreCardApi(hass, settings=settings)
         self.store = InvestingScoreCardStore(hass, entry.entry_id)
         super().__init__(
             hass,

@@ -21,11 +21,39 @@ def main() -> int:
         default=str(ROOT / "data" / "weekly_snapshot.json"),
         help="Output JSON path",
     )
+    parser.add_argument(
+        "--list-mode",
+        choices=["default", "extend", "custom"],
+        default="default",
+        help="Ticker list mode",
+    )
+    parser.add_argument(
+        "--custom-tickers",
+        default="",
+        help="Comma-separated custom tickers",
+    )
+    parser.add_argument(
+        "--include-benchmarks",
+        action="store_true",
+        default=True,
+        help="Include ACWI/S&P500/OMXC25 benchmarks",
+    )
+    parser.add_argument(
+        "--no-benchmarks",
+        action="store_true",
+        help="Disable benchmark assets",
+    )
     args = parser.parse_args()
     out = Path(args.output)
     out.parent.mkdir(parents=True, exist_ok=True)
 
-    snapshot = build_snapshot()
+    include_benchmarks = False if args.no_benchmarks else bool(args.include_benchmarks)
+    settings = {
+        "list_mode": args.list_mode,
+        "custom_tickers": args.custom_tickers,
+        "include_benchmarks": include_benchmarks,
+    }
+    snapshot = build_snapshot(settings)
     out.write_text(json.dumps(snapshot, indent=2), encoding="utf-8")
     print(f"Snapshot written: {out}")
     print(f"Assets: {len(snapshot.get('assets', []))}")

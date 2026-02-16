@@ -19,7 +19,7 @@ class AssetConfig:
     benchmark_fair_pe: float | None = None
 
 
-ASSETS: list[AssetConfig] = [
+DEFAULT_COMPANY_ASSETS: list[AssetConfig] = [
     AssetConfig("Nvidia", "NVDA", "S&P 500"),
     AssetConfig("Apple", "AAPL", "S&P 500"),
     AssetConfig("Microsoft", "MSFT", "S&P 500"),
@@ -40,6 +40,9 @@ ASSETS: list[AssetConfig] = [
     AssetConfig("DSV", "DSV.CO", "OMXC25"),
     AssetConfig("Danske Bank", "DANSKE.CO", "OMXC25"),
     AssetConfig("A.P. Moller - Maersk", "MAERSK-B.CO", "OMXC25"),
+]
+
+DEFAULT_BENCHMARK_ASSETS: list[AssetConfig] = [
     AssetConfig("MSCI World ACWI (benchmark)", "ACWI", "Benchmark", True, "ACWI", 20.0),
     AssetConfig("S&P 500 (benchmark)", "^GSPC", "Benchmark", True, "SPY", 21.0),
     AssetConfig("OMXC25 (benchmark)", "^OMXC25", "Benchmark", True, "XACTC25.CO", 17.5),
@@ -56,6 +59,39 @@ def _safe_float(value: Any) -> float | None:
     if out != out:
         return None
     return out
+
+
+def _parse_custom_tickers(raw: str) -> list[str]:
+    items: list[str] = []
+    seen: set[str] = set()
+    for part in (raw or "").split(","):
+        ticker = part.strip().upper()
+        if not ticker:
+            continue
+        if ticker in seen:
+            continue
+        seen.add(ticker)
+        items.append(ticker)
+    return items
+
+
+def _resolve_assets(settings: dict[str, Any] | None) -> list[AssetConfig]:
+    cfg = settings or {}
+    list_mode = str(cfg.get("list_mode", "default") or "default").strip().lower()
+    include_benchmarks = bool(cfg.get("include_benchmarks", True))
+    custom_tickers = _parse_custom_tickers(str(cfg.get("custom_tickers", "") or ""))
+    custom_assets = [AssetConfig(ticker, ticker, "Custom") for ticker in custom_tickers]
+
+    if list_mode == "custom":
+        selected = custom_assets
+    elif list_mode == "extend":
+        selected = [*DEFAULT_COMPANY_ASSETS, *custom_assets]
+    else:
+        selected = list(DEFAULT_COMPANY_ASSETS)
+
+    if include_benchmarks:
+        selected = [*selected, *DEFAULT_BENCHMARK_ASSETS]
+    return selected
 
 
 def _pick(df: Any, names: list[str], col: Any) -> float | None:
@@ -439,10 +475,11 @@ def _compute_benchmark(asset: AssetConfig) -> dict[str, Any]:
     }
 
 
-def build_snapshot() -> dict[str, Any]:
+def build_snapshot(settings: dict[str, Any] | None = None) -> dict[str, Any]:
     """Build full snapshot for all assets."""
+    selected_assets = _resolve_assets(settings)
     assets: list[dict[str, Any]] = []
-    for asset in ASSETS:
+    for asset in selected_assets:
         try:
             row = _compute_benchmark(asset) if asset.benchmark else _compute_company(asset)
         except Exception as err:  # noqa: BLE001
@@ -476,6 +513,11 @@ def build_snapshot() -> dict[str, Any]:
     }
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
+        "settings": {
+            "list_mode": str((settings or {}).get("list_mode", "default")),
+            "custom_tickers": str((settings or {}).get("custom_tickers", "")),
+            "include_benchmarks": bool((settings or {}).get("include_benchmarks", True)),
+        },
         "assets": assets,
         "top_opportunities": top,
         "summary": summary,
