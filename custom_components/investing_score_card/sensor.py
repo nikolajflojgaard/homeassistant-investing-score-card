@@ -26,7 +26,11 @@ async def async_setup_entry(
     async_add_entities: AddEntitiesCallback,
 ) -> None:
     coordinator: InvestingScoreCardCoordinator = hass.data[DOMAIN][entry.entry_id]
-    entities: list[SensorEntity] = [TopOpportunitiesSensor(entry, coordinator), MarketSummarySensor(entry, coordinator)]
+    entities: list[SensorEntity] = [
+        TopOpportunitiesSensor(entry, coordinator),
+        MarketSummarySensor(entry, coordinator),
+        UpcomingEarningsSensor(entry, coordinator),
+    ]
     for rank in range(1, 11):
         entities.append(RankedOpportunitySensor(entry, coordinator, rank))
 
@@ -94,6 +98,36 @@ class MarketSummarySensor(BaseScoreSensor):
         base = dict(super().extra_state_attributes or {})
         data = self.coordinator.data or {}
         base.update(data.get("summary", {}))
+        base["generated_at"] = data.get("generated_at")
+        return base
+
+
+class UpcomingEarningsSensor(BaseScoreSensor):
+    """Upcoming earnings calendar summary."""
+
+    _attr_has_entity_name = True
+    _attr_name = "Upcoming Earnings"
+    _attr_icon = "mdi:calendar-clock"
+
+    def __init__(self, entry: ConfigEntry, coordinator: InvestingScoreCardCoordinator) -> None:
+        super().__init__(entry, coordinator)
+        self._attr_unique_id = f"{entry.entry_id}_upcoming_earnings"
+
+    @property
+    def native_value(self) -> str:
+        events = (self.coordinator.data or {}).get("upcoming_earnings_next_5", [])
+        if not events:
+            return "N/A"
+        event = events[0]
+        dt = str(event.get("next_earnings_iso", ""))
+        date = dt.split("T")[0] if "T" in dt else dt
+        return f"{date} - {event.get('company', 'N/A')}"
+
+    @property
+    def extra_state_attributes(self) -> dict[str, Any]:
+        base = dict(super().extra_state_attributes or {})
+        data = self.coordinator.data or {}
+        base["events_next_5"] = data.get("upcoming_earnings_next_5", [])
         base["generated_at"] = data.get("generated_at")
         return base
 

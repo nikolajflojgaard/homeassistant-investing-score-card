@@ -61,6 +61,16 @@ def _safe_float(value: Any) -> float | None:
     return out
 
 
+def _safe_int(value: Any) -> int | None:
+    if value is None:
+        return None
+    try:
+        out = int(value)
+    except (TypeError, ValueError):
+        return None
+    return out
+
+
 def _parse_custom_tickers(raw: str) -> list[str]:
     items: list[str] = []
     seen: set[str] = set()
@@ -92,6 +102,34 @@ def _resolve_assets(settings: dict[str, Any] | None) -> list[AssetConfig]:
     if include_benchmarks:
         selected = [*selected, *DEFAULT_BENCHMARK_ASSETS]
     return selected
+
+
+def _next_earnings_from_info(info: dict[str, Any]) -> tuple[str, int | None]:
+    candidates: list[int] = []
+    for key in ("earningsTimestampStart", "earningsTimestamp", "earningsTimestampEnd"):
+        ts = _safe_int(info.get(key))
+        if ts is not None and ts > 0:
+            candidates.append(ts)
+
+    earnings_date = info.get("earningsDate")
+    if isinstance(earnings_date, list):
+        for item in earnings_date:
+            ts = _safe_int(item)
+            if ts is not None and ts > 0:
+                candidates.append(ts)
+    else:
+        ts = _safe_int(earnings_date)
+        if ts is not None and ts > 0:
+            candidates.append(ts)
+
+    if not candidates:
+        return ("", None)
+
+    now_ts = int(datetime.now(timezone.utc).timestamp())
+    future = sorted(ts for ts in candidates if ts >= now_ts)
+    chosen = future[0] if future else sorted(candidates)[-1]
+    iso = datetime.fromtimestamp(chosen, tz=timezone.utc).isoformat()
+    return (iso, chosen)
 
 
 def _pick(df: Any, names: list[str], col: Any) -> float | None:
@@ -338,6 +376,8 @@ def _extract_financial_metrics(ticker: str) -> dict[str, Any]:
     if net_debt is not None and ebitda_now not in (None, 0):
         net_debt_to_ebitda = max(0.0, net_debt / (ebitda_now * 4.0))
 
+    next_earnings_iso, next_earnings_ts = _next_earnings_from_info(info)
+
     return {
         "sector": str(info.get("sector", "")),
         "industry": str(info.get("industry", "")),
@@ -353,6 +393,8 @@ def _extract_financial_metrics(ticker: str) -> dict[str, Any]:
         "op_margin_prior_pct": op_margin_prior,
         "fcf_yoy_pct": _yoy(fcf_now, fcf_prev),
         "net_debt_to_ebitda": net_debt_to_ebitda,
+        "next_earnings_iso": next_earnings_iso,
+        "next_earnings_ts": next_earnings_ts,
     }
 
 
@@ -428,6 +470,8 @@ def _compute_company(asset: AssetConfig) -> dict[str, Any]:
             "fcf_yoy_pct": round(m["fcf_yoy_pct"], 1) if m["fcf_yoy_pct"] is not None else None,
             "net_debt_to_ebitda": round(m["net_debt_to_ebitda"], 2) if m["net_debt_to_ebitda"] is not None else None,
         },
+        "next_earnings_iso": m.get("next_earnings_iso", ""),
+        "next_earnings_ts": m.get("next_earnings_ts"),
     }
 
 
@@ -505,6 +549,21 @@ def build_snapshot(settings: dict[str, Any] | None = None) -> dict[str, Any]:
         reverse=True,
     )
     top = ranked[:10]
+    upcoming = sorted(
+        [
+            {
+                "company": a.get("name"),
+                "ticker": a.get("ticker"),
+                "index": a.get("index"),
+                "next_earnings_iso": a.get("next_earnings_iso"),
+                "next_earnings_ts": a.get("next_earnings_ts"),
+            }
+            for a in assets
+            if not a.get("benchmark", False) and a.get("next_earnings_ts") is not None
+        ],
+        key=lambda item: item.get("next_earnings_ts") or 0,
+    )
+    next_5 = upcoming[:5]
     summary = {
         "undervalued": sum(1 for a in assets if a.get("assessment") == "Undervalued"),
         "fair": sum(1 for a in assets if a.get("assessment") == "Fair"),
@@ -520,5 +579,6 @@ def build_snapshot(settings: dict[str, Any] | None = None) -> dict[str, Any]:
         },
         "assets": assets,
         "top_opportunities": top,
+        "upcoming_earnings_next_5": next_5,
         "summary": summary,
     }

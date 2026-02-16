@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-16T10:05:55.797968+00:00",
+  "generated_at": "2026-02-16T10:42:03.671783+00:00",
   "settings": {
     "list_mode": "default",
     "custom_tickers": "",
@@ -44,7 +44,9 @@
         "op_margin_prior_pct": 62.3,
         "fcf_yoy_pct": 31.5,
         "net_debt_to_ebitda": 0.07
-      }
+      },
+      "next_earnings_iso": "2026-02-25T21:00:00+00:00",
+      "next_earnings_ts": 1772053200
     },
     {
       "name": "Apple",
@@ -84,7 +86,9 @@
         "op_margin_prior_pct": 34.5,
         "fcf_yoy_pct": 91.0,
         "net_debt_to_ebitda": 0.21
-      }
+      },
+      "next_earnings_iso": "2026-04-30T21:00:00+00:00",
+      "next_earnings_ts": 1777582800
     },
     {
       "name": "Microsoft",
@@ -124,7 +128,9 @@
         "op_margin_prior_pct": 45.5,
         "fcf_yoy_pct": -9.3,
         "net_debt_to_ebitda": 0.07
-      }
+      },
+      "next_earnings_iso": "2026-04-29T21:00:00+00:00",
+      "next_earnings_ts": 1777496400
     },
     {
       "name": "Amazon",
@@ -164,7 +170,9 @@
         "op_margin_prior_pct": 11.3,
         "fcf_yoy_pct": -16.1,
         "net_debt_to_ebitda": 0.82
-      }
+      },
+      "next_earnings_iso": "2026-04-30T21:00:00+00:00",
+      "next_earnings_ts": 1777582800
     },
     {
       "name": "Alphabet",
@@ -204,7 +212,9 @@
         "op_margin_prior_pct": 32.1,
         "fcf_yoy_pct": -1.2,
         "net_debt_to_ebitda": 0.09
-      }
+      },
+      "next_earnings_iso": "2026-04-23T21:00:00+00:00",
+      "next_earnings_ts": 1776978000
     },
     {
       "name": "Meta",
@@ -244,7 +254,9 @@
         "op_margin_prior_pct": 48.3,
         "fcf_yoy_pct": 9.3,
         "net_debt_to_ebitda": 0.18
-      }
+      },
+      "next_earnings_iso": "2026-04-29T21:00:00+00:00",
+      "next_earnings_ts": 1777496400
     },
     {
       "name": "Broadcom",
@@ -284,7 +296,9 @@
         "op_margin_prior_pct": 32.9,
         "fcf_yoy_pct": 36.2,
         "net_debt_to_ebitda": 1.24
-      }
+      },
+      "next_earnings_iso": "2026-03-04T21:00:00+00:00",
+      "next_earnings_ts": 1772658000
     },
     {
       "name": "Tesla",
@@ -324,7 +338,9 @@
         "op_margin_prior_pct": 6.2,
         "fcf_yoy_pct": -30.2,
         "net_debt_to_ebitda": 1.26
-      }
+      },
+      "next_earnings_iso": "2026-04-21T21:00:00+00:00",
+      "next_earnings_ts": 1776805200
     },
     {
       "name": "Berkshire Hathaway",
@@ -359,7 +375,9 @@
         "op_margin_prior_pct": null,
         "fcf_yoy_pct": -42.4,
         "net_debt_to_ebitda": null
-      }
+      },
+      "next_earnings_iso": "2026-02-28T21:00:00+00:00",
+      "next_earnings_ts": 1772312400
     },
     {
       "name": "Walmart",
@@ -399,7 +417,9 @@
         "op_margin_prior_pct": 4.0,
         "fcf_yoy_pct": 405.9,
         "net_debt_to_ebitda": 0.72
-      }
+      },
+      "next_earnings_iso": "2026-02-19T13:30:00+00:00",
+      "next_earnings_ts": 1771507800
     },
     {
       "name": "Eli Lilly",
@@ -439,7 +459,9 @@
         "op_margin_prior_pct": 42.0,
         "fcf_yoy_pct": -65.0,
         "net_debt_to_ebitda": 0.73
-      }
+      },
+      "next_earnings_iso": "2026-04-30T13:30:00+00:00",
+      "next_earnings_ts": 1777555800
     },
     {
       "name": "JPMorgan Chase",
@@ -475,7 +497,9 @@
         "op_margin_prior_pct": null,
         "fcf_yoy_pct": 39.0,
         "net_debt_to_ebitda": null
-      }
+      },
+      "next_earnings_iso": "2026-04-14T13:30:00+00:00",
+      "next_earnings_ts": 1776173400
     },
     {
       "name": "Visa",
@@ -515,7 +539,9 @@
         "op_margin_prior_pct": 65.6,
         "fcf_yoy_pct": 26.7,
         "net_debt_to_ebitda": 0.22
-      }
+      },
+      "next_earnings_iso": "2026-04-28T21:00:00+00:00",
+      "next_earnings_ts": 1777410000
     },
     {
       "name": "ExxonMobil",
@@ -551,7 +577,9 @@
         "op_margin_prior_pct": 9.6,
         "fcf_yoy_pct": -46.9,
         "net_debt_to_ebitda": null
-      }
+      },
+      "next_earnings_iso": "2026-05-01T13:30:00+00:00",
+      "next_earnings_ts": 1777642200
     },
     {
       "name": "Johnson & Johnson",
@@ -591,7 +619,9 @@
         "op_margin_prior_pct": 16.2,
         "fcf_yoy_pct": 13.1,
         "net_debt_to_ebitda": 0.98
-      }
+      },
+      "next_earnings_iso": "2026-04-14T13:30:00+00:00",
+      "next_earnings_ts": 1776173400
     },
     {
       "name": "Novo Nordisk",
@@ -631,7 +661,9 @@
         "op_margin_prior_pct": 42.9,
         "fcf_yoy_pct": -750.8,
         "net_debt_to_ebitda": 0.64
-      }
+      },
+      "next_earnings_iso": "2026-05-06T13:30:00+00:00",
+      "next_earnings_ts": 1778074200
     },
     {
       "name": "Nordea",
@@ -642,14 +674,14 @@
       "prior_period": "2024-09-30",
       "sector": "Financial Services",
       "industry": "Banks - Regional",
-      "price": 16.48,
+      "price": 16.49,
       "valuation_model": "PB",
       "valuation_style": "financials",
       "actual_multiple": 1.74,
       "fair_multiple": 1.18,
       "multiple_ratio": 1.47,
       "fair_price": 11.2,
-      "valuation_gap_pct": -32.0,
+      "valuation_gap_pct": -32.1,
       "assessment": "Overvalued",
       "opportunity_score": 12.3,
       "score_total": 32.3,
@@ -668,7 +700,9 @@
         "op_margin_prior_pct": null,
         "fcf_yoy_pct": -92.6,
         "net_debt_to_ebitda": null
-      }
+      },
+      "next_earnings_iso": "2026-04-22T16:30:00+00:00",
+      "next_earnings_ts": 1776875400
     },
     {
       "name": "DSV",
@@ -679,13 +713,13 @@
       "prior_period": "2024-09-30",
       "sector": "Industrials",
       "industry": "Integrated Freight & Logistics",
-      "price": 1672.0,
+      "price": 1657.0,
       "valuation_model": "EV/EBITDA",
       "valuation_style": "industrials",
       "actual_multiple": 22.55,
       "fair_multiple": 9.29,
       "multiple_ratio": 2.43,
-      "fair_price": 688.88,
+      "fair_price": 682.7,
       "valuation_gap_pct": -58.8,
       "assessment": "Overvalued",
       "opportunity_score": 37.2,
@@ -707,7 +741,9 @@
         "op_margin_prior_pct": 10.0,
         "fcf_yoy_pct": 33.8,
         "net_debt_to_ebitda": 2.67
-      }
+      },
+      "next_earnings_iso": "2026-04-29T16:00:00+00:00",
+      "next_earnings_ts": 1777478400
     },
     {
       "name": "Danske Bank",
@@ -718,14 +754,14 @@
       "prior_period": "2024-12-31",
       "sector": "Financial Services",
       "industry": "Banks - Regional",
-      "price": 333.5,
+      "price": 334.5,
       "valuation_model": "PB",
       "valuation_style": "financials",
       "actual_multiple": 1.5,
       "fair_multiple": 1.69,
       "multiple_ratio": 0.89,
       "fair_price": 375.44,
-      "valuation_gap_pct": 12.6,
+      "valuation_gap_pct": 12.2,
       "assessment": "Fair",
       "opportunity_score": 70.5,
       "score_total": 60.5,
@@ -743,7 +779,9 @@
         "op_margin_prior_pct": null,
         "fcf_yoy_pct": 177.0,
         "net_debt_to_ebitda": null
-      }
+      },
+      "next_earnings_iso": "2026-04-30T16:00:00+00:00",
+      "next_earnings_ts": 1777564800
     },
     {
       "name": "A.P. Moller - Maersk",
@@ -779,7 +817,9 @@
         "op_margin_prior_pct": null,
         "fcf_yoy_pct": -42.2,
         "net_debt_to_ebitda": null
-      }
+      },
+      "next_earnings_iso": "2026-02-05T16:00:00+00:00",
+      "next_earnings_ts": 1770307200
     },
     {
       "name": "MSCI World ACWI (benchmark)",
@@ -840,14 +880,14 @@
       "prior_period": "",
       "sector": "Broad Market Index",
       "industry": "Diversified",
-      "price": 1803.07,
+      "price": 1801.03,
       "valuation_model": "PE",
       "valuation_style": "broad_market",
-      "actual_multiple": 15.7,
+      "actual_multiple": 15.67,
       "fair_multiple": 17.5,
       "multiple_ratio": 0.9,
-      "fair_price": 2009.39,
-      "valuation_gap_pct": 11.4,
+      "fair_price": 2011.04,
+      "valuation_gap_pct": 11.7,
       "assessment": "Fair",
       "opportunity_score": 0.0,
       "score_total": null,
@@ -896,7 +936,9 @@
         "op_margin_prior_pct": 45.5,
         "fcf_yoy_pct": -9.3,
         "net_debt_to_ebitda": 0.07
-      }
+      },
+      "next_earnings_iso": "2026-04-29T21:00:00+00:00",
+      "next_earnings_ts": 1777496400
     },
     {
       "name": "Johnson & Johnson",
@@ -936,7 +978,9 @@
         "op_margin_prior_pct": 16.2,
         "fcf_yoy_pct": 13.1,
         "net_debt_to_ebitda": 0.98
-      }
+      },
+      "next_earnings_iso": "2026-04-14T13:30:00+00:00",
+      "next_earnings_ts": 1776173400
     },
     {
       "name": "Alphabet",
@@ -976,7 +1020,9 @@
         "op_margin_prior_pct": 32.1,
         "fcf_yoy_pct": -1.2,
         "net_debt_to_ebitda": 0.09
-      }
+      },
+      "next_earnings_iso": "2026-04-23T21:00:00+00:00",
+      "next_earnings_ts": 1776978000
     },
     {
       "name": "Meta",
@@ -1016,7 +1062,9 @@
         "op_margin_prior_pct": 48.3,
         "fcf_yoy_pct": 9.3,
         "net_debt_to_ebitda": 0.18
-      }
+      },
+      "next_earnings_iso": "2026-04-29T21:00:00+00:00",
+      "next_earnings_ts": 1777496400
     },
     {
       "name": "Nvidia",
@@ -1056,7 +1104,9 @@
         "op_margin_prior_pct": 62.3,
         "fcf_yoy_pct": 31.5,
         "net_debt_to_ebitda": 0.07
-      }
+      },
+      "next_earnings_iso": "2026-02-25T21:00:00+00:00",
+      "next_earnings_ts": 1772053200
     },
     {
       "name": "Amazon",
@@ -1096,7 +1146,9 @@
         "op_margin_prior_pct": 11.3,
         "fcf_yoy_pct": -16.1,
         "net_debt_to_ebitda": 0.82
-      }
+      },
+      "next_earnings_iso": "2026-04-30T21:00:00+00:00",
+      "next_earnings_ts": 1777582800
     },
     {
       "name": "Apple",
@@ -1136,7 +1188,9 @@
         "op_margin_prior_pct": 34.5,
         "fcf_yoy_pct": 91.0,
         "net_debt_to_ebitda": 0.21
-      }
+      },
+      "next_earnings_iso": "2026-04-30T21:00:00+00:00",
+      "next_earnings_ts": 1777582800
     },
     {
       "name": "Novo Nordisk",
@@ -1176,7 +1230,9 @@
         "op_margin_prior_pct": 42.9,
         "fcf_yoy_pct": -750.8,
         "net_debt_to_ebitda": 0.64
-      }
+      },
+      "next_earnings_iso": "2026-05-06T13:30:00+00:00",
+      "next_earnings_ts": 1778074200
     },
     {
       "name": "Danske Bank",
@@ -1187,14 +1243,14 @@
       "prior_period": "2024-12-31",
       "sector": "Financial Services",
       "industry": "Banks - Regional",
-      "price": 333.5,
+      "price": 334.5,
       "valuation_model": "PB",
       "valuation_style": "financials",
       "actual_multiple": 1.5,
       "fair_multiple": 1.69,
       "multiple_ratio": 0.89,
       "fair_price": 375.44,
-      "valuation_gap_pct": 12.6,
+      "valuation_gap_pct": 12.2,
       "assessment": "Fair",
       "opportunity_score": 70.5,
       "score_total": 60.5,
@@ -1212,7 +1268,9 @@
         "op_margin_prior_pct": null,
         "fcf_yoy_pct": 177.0,
         "net_debt_to_ebitda": null
-      }
+      },
+      "next_earnings_iso": "2026-04-30T16:00:00+00:00",
+      "next_earnings_ts": 1777564800
     },
     {
       "name": "Berkshire Hathaway",
@@ -1247,7 +1305,46 @@
         "op_margin_prior_pct": null,
         "fcf_yoy_pct": -42.4,
         "net_debt_to_ebitda": null
-      }
+      },
+      "next_earnings_iso": "2026-02-28T21:00:00+00:00",
+      "next_earnings_ts": 1772312400
+    }
+  ],
+  "upcoming_earnings_next_5": [
+    {
+      "company": "A.P. Moller - Maersk",
+      "ticker": "MAERSK-B.CO",
+      "index": "OMXC25",
+      "next_earnings_iso": "2026-02-05T16:00:00+00:00",
+      "next_earnings_ts": 1770307200
+    },
+    {
+      "company": "Walmart",
+      "ticker": "WMT",
+      "index": "S&P 500",
+      "next_earnings_iso": "2026-02-19T13:30:00+00:00",
+      "next_earnings_ts": 1771507800
+    },
+    {
+      "company": "Nvidia",
+      "ticker": "NVDA",
+      "index": "S&P 500",
+      "next_earnings_iso": "2026-02-25T21:00:00+00:00",
+      "next_earnings_ts": 1772053200
+    },
+    {
+      "company": "Berkshire Hathaway",
+      "ticker": "BRK-B",
+      "index": "S&P 500",
+      "next_earnings_iso": "2026-02-28T21:00:00+00:00",
+      "next_earnings_ts": 1772312400
+    },
+    {
+      "company": "Broadcom",
+      "ticker": "AVGO",
+      "index": "S&P 500",
+      "next_earnings_iso": "2026-03-04T21:00:00+00:00",
+      "next_earnings_ts": 1772658000
     }
   ],
   "summary": {

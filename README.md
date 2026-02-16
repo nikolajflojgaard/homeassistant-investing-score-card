@@ -38,6 +38,9 @@ Each asset includes:
     - financial metrics (YoY, margins, leverage)
 - `sensor.<name>_market_summary`
   - counts for undervalued/fair/overvalued
+- `sensor.<name>_upcoming_earnings`
+  - state: nearest upcoming earnings event
+  - attributes: `events_next_5` calendar list used on start dashboard
 - one sensor per asset
   - state: valuation assessment
   - attributes: score breakdown, metrics, fair price, valuation gap

@@ -28,6 +28,23 @@ sections:
         name: Top Opportunity
         icon: mdi:podium-gold
         color: amber
+      - type: tile
+        entity: sensor.homeassistant_investing_score_card_upcoming_earnings
+        name: Next Earnings
+        icon: mdi:calendar-clock
+        color: blue
+      - type: markdown
+        title: Earnings Calendar (Next 5)
+        content: >
+          {% set ev = state_attr('sensor.homeassistant_investing_score_card_upcoming_earnings',
+          'events_next_5') or [] %}
+          {% if ev | count == 0 %}
+          No upcoming earnings found.
+          {% else %}
+          {% for e in ev %}
+          - **{{ (e.next_earnings_iso or '')[:10] }}** — {{ e.company }} ({{ e.ticker }})
+          {% endfor %}
+          {% endif %}
   - type: grid
     cards:
       - type: heading
