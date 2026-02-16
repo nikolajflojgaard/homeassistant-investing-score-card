@@ -1,0 +1,64 @@
+title: Investing
+path: investing
+icon: mdi:chart-line
+type: sections
+sections:
+  - type: grid
+    cards:
+      - type: tile
+        entity: sensor.homeassistant_investing_score_card_market_summary
+        name: Market Summary
+        icon: mdi:chart-bell-curve
+        color: teal
+      - type: tile
+        entity: sensor.homeassistant_investing_score_card_top_opportunities
+        name: Top Opportunity
+        icon: mdi:podium-gold
+        color: amber
+      - type: button
+        name: Refresh Now
+        icon: mdi:refresh
+        tap_action:
+          action: perform-action
+          perform_action: investing_score_card.refresh_data
+        show_state: false
+  - type: grid
+    cards:
+      - type: markdown
+        title: Top 10 Opportunities
+        content: >
+          Brug `sensor.homeassistant_investing_score_card_top_opportunities`
+          attributten `top_10` i en tabel/markdown card hvis du vil vise hele
+          ranglisten.
+      - type: entities
+        title: Top Picks (Quick View)
+        show_header_toggle: false
+        entities:
+          - entity: sensor.microsoft
+            name: Microsoft
+          - entity: sensor.johnson_johnson
+            name: Johnson & Johnson
+          - entity: sensor.alphabet
+            name: Alphabet
+          - entity: sensor.meta
+            name: Meta
+          - entity: sensor.amazon
+            name: Amazon
+  - type: grid
+    cards:
+      - type: entities
+        title: Benchmarks
+        show_header_toggle: false
+        entities:
+          - entity: sensor.msci_world_acwi_benchmark
+            name: MSCI World ACWI
+          - entity: sensor.s_p_500_benchmark
+            name: S&P 500
+          - entity: sensor.omxc25_benchmark
+            name: OMXC25
+      - type: tile
+        entity: sensor.omxc25_benchmark
+        name: OMXC25 Valuation
+        icon: mdi:finance
+        vertical: true
+

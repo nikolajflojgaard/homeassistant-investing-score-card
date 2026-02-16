@@ -1,0 +1,40 @@
+<svg width="1400" height="860" viewBox="0 0 1400 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f9fc"/>
+      <stop offset="100%" stop-color="#eef4f9"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1400" height="860" fill="url(#bg)"/>
+  <rect x="40" y="30" width="1320" height="72" rx="20" fill="#ffffff" stroke="#dbe6ee"/>
+  <text x="76" y="74" font-family="Arial, sans-serif" font-size="28" fill="#1f2d3d">Home Assistant • Investing Dashboard</text>
+
+  <rect x="40" y="128" width="420" height="170" rx="22" fill="#ffffff" stroke="#dbe6ee"/>
+  <text x="70" y="174" font-family="Arial, sans-serif" font-size="22" fill="#2a3d52">Market Summary</text>
+  <text x="70" y="220" font-family="Arial, sans-serif" font-size="34" fill="#1f2d3d">U: 7  F: 4  O: 12</text>
+
+  <rect x="490" y="128" width="420" height="170" rx="22" fill="#ffffff" stroke="#dbe6ee"/>
+  <text x="520" y="174" font-family="Arial, sans-serif" font-size="22" fill="#2a3d52">Top Opportunity</text>
+  <text x="520" y="220" font-family="Arial, sans-serif" font-size="34" fill="#1f2d3d">Microsoft</text>
+
+  <rect x="940" y="128" width="420" height="170" rx="22" fill="#ffffff" stroke="#dbe6ee"/>
+  <rect x="980" y="185" width="340" height="64" rx="16" fill="#5f8fa8"/>
+  <text x="1083" y="226" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">Refresh Now</text>
+
+  <rect x="40" y="326" width="890" height="484" rx="22" fill="#ffffff" stroke="#dbe6ee"/>
+  <text x="70" y="372" font-family="Arial, sans-serif" font-size="24" fill="#2a3d52">Top 10 Opportunities</text>
+  <rect x="70" y="394" width="830" height="2" fill="#e6eef4"/>
+
+  <text x="80" y="438" font-family="Arial, sans-serif" font-size="20" fill="#1f2d3d">1. Microsoft • Undervalued • Score 76.5</text>
+  <text x="80" y="482" font-family="Arial, sans-serif" font-size="20" fill="#1f2d3d">2. Johnson &amp; Johnson • Undervalued • Score 76.4</text>
+  <text x="80" y="526" font-family="Arial, sans-serif" font-size="20" fill="#1f2d3d">3. Alphabet • Undervalued • Score 70.2</text>
+  <text x="80" y="570" font-family="Arial, sans-serif" font-size="20" fill="#1f2d3d">4. Meta • Undervalued • Score 65.6</text>
+  <text x="80" y="614" font-family="Arial, sans-serif" font-size="20" fill="#1f2d3d">5. Amazon • Undervalued • Score 58.6</text>
+
+  <rect x="960" y="326" width="400" height="484" rx="22" fill="#ffffff" stroke="#dbe6ee"/>
+  <text x="990" y="372" font-family="Arial, sans-serif" font-size="24" fill="#2a3d52">Benchmarks</text>
+  <rect x="990" y="394" width="340" height="2" fill="#e6eef4"/>
+  <text x="990" y="442" font-family="Arial, sans-serif" font-size="19" fill="#1f2d3d">ACWI • Overvalued • Ratio 1.18</text>
+  <text x="990" y="486" font-family="Arial, sans-serif" font-size="19" fill="#1f2d3d">S&amp;P 500 • Overvalued • Ratio 1.31</text>
+  <text x="990" y="530" font-family="Arial, sans-serif" font-size="19" fill="#1f2d3d">OMXC25 • Fair • Ratio 0.90</text>
+</svg>

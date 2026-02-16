@@ -1,0 +1,10 @@
+refresh_data:
+  name: Refresh Investing Data
+  description: Refresh all investing score and valuation data immediately.
+  fields:
+    entry_id:
+      name: Entry ID
+      description: Optional config entry id. If omitted, all entries refresh.
+      required: false
+      selector:
+        text:

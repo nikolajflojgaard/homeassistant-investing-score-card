@@ -1,0 +1,9 @@
+homeassistant_investing_soft:
+  # Keep HA-native feel, only soften corners and dividers.
+  ha-card-border-radius: "18px"
+  ha-card-border-width: "1px"
+  ha-card-border-color: "rgba(120, 140, 160, 0.18)"
+  divider-color: "rgba(120, 140, 160, 0.20)"
+  state-icon-color: "#5f8fa8"
+  primary-color: "#4f7f99"
+  accent-color: "#7ab2c7"

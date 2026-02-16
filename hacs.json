@@ -1,0 +1,9 @@
+{
+  "name": "homeassistant Investing Score Card",
+  "content_in_root": false,
+  "domains": [
+    "investing_score_card"
+  ],
+  "homeassistant": "2024.6.0",
+  "render_readme": true
+}

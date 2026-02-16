@@ -1,0 +1,21 @@
+company,index,ir_url,latest_report_date,latest_report_url,prior_report_date,prior_report_url,revenue_yoy_pct,eps_yoy_pct,op_margin_latest_pct,op_margin_prior_pct,guidance_change,fcf_yoy_pct,net_debt_to_ebitda
+Nvidia,S&P 500,https://investor.nvidia.com/,2025-10-31,https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2026/default.aspx,2024-10-31,,62.5,66.7,63.2,62.3,unchanged,31.5,0.07
+Apple,S&P 500,https://investor.apple.com/,2025-12-31,https://www.apple.com/newsroom/2026/01/apple-reports-first-quarter-results/,2024-12-31,,15.7,18.3,35.4,34.5,unchanged,91.0,0.21
+Microsoft,S&P 500,https://www.microsoft.com/en-us/Investor/,2025-12-31,https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q2/press-release-webcast,2024-12-31,,16.7,59.8,47.1,45.5,unchanged,-9.3,0.07
+Amazon,S&P 500,https://ir.aboutamazon.com/,2025-12-31,https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/default.aspx,2024-12-31,,13.6,4.8,11.7,11.3,unchanged,-16.1,0.82
+Alphabet,S&P 500,https://abc.xyz/investor/,2025-12-31,https://abc.xyz/investor/news/news-details/2026/Alphabet-Announces-Fourth-Quarter-2025-and-Fiscal-Year-Results-2026-KEvZIMKBLS/default.aspx,2024-12-31,,18.0,31.2,31.6,32.1,unchanged,-1.2,0.09
+Meta,S&P 500,https://investor.atmeta.com/,2025-12-31,https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Fourth-Quarter-and-Full-Year-2025-Results/,2024-12-31,,23.8,10.7,41.3,48.3,unchanged,9.3,0.18
+Broadcom,S&P 500,https://investors.broadcom.com/,2025-10-31,https://www.prnewswire.com/news-releases/broadcom-inc-announces-fourth-quarter-and-fiscal-year-2025-financial-results-and-quarterly-dividend-302639606.html,2024-10-31,,28.2,93.3,41.7,32.9,unchanged,36.2,1.24
+Tesla,S&P 500,https://ir.tesla.com/,2025-12-31,https://ir.tesla.com/press-release/tesla-releases-fourth-quarter-and-full-year-2025-financial-results,2024-12-31,,-3.1,-63.6,5.7,6.2,unchanged,-30.2,1.26
+Berkshire Hathaway,S&P 500,https://www.berkshirehathaway.com/,2025-09-30,https://www.sec.gov/Archives/edgar/data/0001067983/000119312525261548/brka-20250930.htm,2024-09-30,,,17.2,,,unchanged,-42.4,
+Walmart,S&P 500,https://stock.walmart.com/,2025-10-31,https://corporate.walmart.com/news/2025/11/20/walmart-releases-q3-fy26-earnings,2024-10-31,,5.8,35.1,3.7,4.0,unchanged,405.9,0.72
+Eli Lilly,S&P 500,https://investor.lilly.com/,2025-12-31,https://www.prnewswire.com/news-releases/lilly-reports-fourth-quarter-2025-financial-results-and-provides-2026-guidance-302678376.html,2024-12-31,,42.6,51.4,46.6,42.0,unchanged,-65.0,0.73
+JPMorgan Chase,S&P 500,https://www.jpmorganchase.com/ir,2025-12-31,https://www.jpmorganchase.com/ir/quarterly-earnings,2024-12-31,,,-3.7,,,unchanged,39.0,
+Visa,S&P 500,https://investor.visa.com/,2025-12-31,https://usa.visa.com/about-visa/newsroom/press-releases.releaseId.22086.html,2024-12-31,,14.6,17.4,61.8,65.6,unchanged,26.7,0.22
+ExxonMobil,S&P 500,https://investor.exxonmobil.com/,2025-12-31,https://corporate.exxonmobil.com/news/news-releases/2026/0130-exxonmobil-announces-2025-results,2024-12-31,,,-11.0,,9.6,unchanged,-46.9,
+Johnson & Johnson,S&P 500,https://investor.jnj.com/,2025-12-31,https://investor.jnj.com/investor-news/news-details/2026/Johnson--Johnson-reports-Q4-and-Full-Year-2025-results/default.aspx,2024-12-31,,9.1,48.9,22.8,16.2,unchanged,13.1,0.98
+Novo Nordisk,OMXC25,https://www.novonordisk.com/investors.html,2025-12-31,https://www.novonordisk.com/content/nncorp/global/en/investors/company-announcement.html,2024-12-31,,-7.6,-4.7,40.1,42.9,unchanged,-750.8,0.64
+Nordea,OMXC25,https://www.nordea.com/en/investors,2025-12-31,https://www.nordea.com/en/press/2026-01-29/fourth-quarter-and-full-year-results-2025,2024-09-30,,-2.3,-5.6,,,unchanged,-92.6,
+DSV,OMXC25,https://investor.dsv.com/,2025-12-31,https://investor.dsv.com/reports-presentations,2024-09-30,,62.6,,7.8,10.0,unchanged,33.8,2.67
+Danske Bank,OMXC25,https://danskebank.com/investor-relations,2025-12-31,https://danskebank.com/news-and-insights/news-archive/press-releases/2026/pr05022026,2024-12-31,,4.6,,,,unchanged,177.0,
+A.P. Moller - Maersk,OMXC25,https://investor.maersk.com/,2025-12-31,https://www.maersk.com/news/articles/2026/02/05/maersk-strong-performance-2025-business-progress,2024-12-31,,-8.7,,,,unchanged,-42.2,

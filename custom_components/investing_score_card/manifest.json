@@ -1,0 +1,19 @@
+{
+  "domain": "investing_score_card",
+  "name": "homeassistant Investing Score Card",
+  "codeowners": [
+    "@nikolajflojgaard"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/nikolajflojgaard/homeassistant-investing-score-card",
+  "integration_type": "service",
+  "iot_class": "calculated",
+  "issue_tracker": "https://github.com/nikolajflojgaard/homeassistant-investing-score-card/issues",
+  "loggers": [
+    "custom_components.investing_score_card"
+  ],
+  "requirements": [
+    "yfinance>=0.2.61"
+  ],
+  "version": "0.1.0"
+}
