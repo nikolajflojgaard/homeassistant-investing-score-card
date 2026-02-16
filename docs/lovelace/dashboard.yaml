@@ -5,6 +5,19 @@ type: sections
 sections:
   - type: grid
     cards:
+      - type: grid
+        columns: 2
+        square: false
+        cards:
+          - type: markdown
+            content: "## Investing"
+          - type: button
+            name: Refresh
+            icon: mdi:refresh
+            tap_action:
+              action: perform-action
+              perform_action: investing_score_card.refresh_data
+            show_state: false
       - type: tile
         entity: sensor.homeassistant_investing_score_card_market_summary
         name: Market Summary
@@ -15,13 +28,6 @@ sections:
         name: Top Opportunity
         icon: mdi:podium-gold
         color: amber
-      - type: button
-        name: Refresh Now
-        icon: mdi:refresh
-        tap_action:
-          action: perform-action
-          perform_action: investing_score_card.refresh_data
-        show_state: false
   - type: grid
     cards:
       - type: heading
