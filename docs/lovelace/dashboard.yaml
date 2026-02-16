@@ -33,18 +33,42 @@ sections:
         name: Next Earnings
         icon: mdi:calendar-clock
         color: blue
-      - type: markdown
-        title: Earnings Calendar (Next 5)
-        content: >
-          {% set ev = state_attr('sensor.homeassistant_investing_score_card_upcoming_earnings',
-          'events_next_5') or [] %}
-          {% if ev | count == 0 %}
-          No upcoming earnings found.
-          {% else %}
-          {% for e in ev %}
-          - **{{ (e.next_earnings_iso or '')[:10] }}** — {{ e.company }} ({{ e.ticker }})
-          {% endfor %}
-          {% endif %}
+      - type: heading
+        heading: Earnings Calendar (Next 5)
+      - type: grid
+        columns: 2
+        square: false
+        cards:
+          - type: button
+            entity: sensor.homeassistant_investing_score_card_earnings_event_1
+            name: Event 1
+            show_state: true
+            tap_action:
+              action: more-info
+          - type: button
+            entity: sensor.homeassistant_investing_score_card_earnings_event_2
+            name: Event 2
+            show_state: true
+            tap_action:
+              action: more-info
+          - type: button
+            entity: sensor.homeassistant_investing_score_card_earnings_event_3
+            name: Event 3
+            show_state: true
+            tap_action:
+              action: more-info
+          - type: button
+            entity: sensor.homeassistant_investing_score_card_earnings_event_4
+            name: Event 4
+            show_state: true
+            tap_action:
+              action: more-info
+          - type: button
+            entity: sensor.homeassistant_investing_score_card_earnings_event_5
+            name: Event 5
+            show_state: true
+            tap_action:
+              action: more-info
   - type: grid
     cards:
       - type: heading

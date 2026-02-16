@@ -33,6 +33,8 @@ async def async_setup_entry(
     ]
     for rank in range(1, 11):
         entities.append(RankedOpportunitySensor(entry, coordinator, rank))
+    for rank in range(1, 6):
+        entities.append(RankedEarningsEventSensor(entry, coordinator, rank))
 
     data = coordinator.data or {}
     for asset in data.get("assets", []):
@@ -129,6 +131,61 @@ class UpcomingEarningsSensor(BaseScoreSensor):
         data = self.coordinator.data or {}
         base["events_next_5"] = data.get("upcoming_earnings_next_5", [])
         base["generated_at"] = data.get("generated_at")
+        return base
+
+
+class RankedEarningsEventSensor(BaseScoreSensor):
+    """Dynamic upcoming earnings event sensor."""
+
+    _attr_has_entity_name = True
+    _attr_icon = "mdi:calendar-star"
+
+    def __init__(self, entry: ConfigEntry, coordinator: InvestingScoreCardCoordinator, rank: int) -> None:
+        super().__init__(entry, coordinator)
+        self._rank = rank
+        self._attr_name = f"Earnings Event {rank}"
+        self._attr_unique_id = f"{entry.entry_id}_earnings_event_{rank}"
+
+    def _item(self) -> dict[str, Any]:
+        events = (self.coordinator.data or {}).get("upcoming_earnings_next_5", [])
+        idx = self._rank - 1
+        if 0 <= idx < len(events):
+            return events[idx]
+        return {}
+
+    @property
+    def native_value(self) -> str:
+        item = self._item()
+        if not item:
+            return "N/A"
+        date_raw = str(item.get("next_earnings_iso", ""))
+        date = date_raw.split("T")[0] if "T" in date_raw else date_raw
+        return f"{date} - {item.get('company', 'N/A')}"
+
+    @property
+    def extra_state_attributes(self) -> dict[str, Any]:
+        base = dict(super().extra_state_attributes or {})
+        item = self._item()
+        base.update(
+            {
+                "rank": self._rank,
+                "company": item.get("company"),
+                "ticker": item.get("ticker"),
+                "index": item.get("index"),
+                "next_earnings_iso": item.get("next_earnings_iso"),
+                "assessment": item.get("assessment"),
+                "price": item.get("price"),
+                "fair_price": item.get("fair_price"),
+                "score_total": item.get("score_total"),
+                "grade": item.get("grade"),
+                "opportunity_score": item.get("opportunity_score"),
+                "valuation_model": item.get("valuation_model"),
+                "multiple_ratio": item.get("multiple_ratio"),
+                "components": item.get("components", {}),
+                "metrics": item.get("metrics", {}),
+                "generated_at": (self.coordinator.data or {}).get("generated_at"),
+            }
+        )
         return base
 
 

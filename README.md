@@ -41,6 +41,9 @@ Each asset includes:
 - `sensor.<name>_upcoming_earnings`
   - state: nearest upcoming earnings event
   - attributes: `events_next_5` calendar list used on start dashboard
+- `sensor.<name>_earnings_event_1` ... `sensor.<name>_earnings_event_5`
+  - clickable earnings boxes in UI
+  - popup includes valuation + scoring + core financial metrics for that company
 - one sensor per asset
   - state: valuation assessment
   - attributes: score breakdown, metrics, fair price, valuation gap

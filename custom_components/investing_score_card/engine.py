@@ -557,6 +557,16 @@ def build_snapshot(settings: dict[str, Any] | None = None) -> dict[str, Any]:
                 "index": a.get("index"),
                 "next_earnings_iso": a.get("next_earnings_iso"),
                 "next_earnings_ts": a.get("next_earnings_ts"),
+                "assessment": a.get("assessment"),
+                "price": a.get("price"),
+                "fair_price": a.get("fair_price"),
+                "score_total": a.get("score_total"),
+                "grade": a.get("grade"),
+                "opportunity_score": a.get("opportunity_score"),
+                "valuation_model": a.get("valuation_model"),
+                "multiple_ratio": a.get("multiple_ratio"),
+                "components": a.get("components", {}),
+                "metrics": a.get("metrics", {}),
             }
             for a in assets
             if not a.get("benchmark", False) and a.get("next_earnings_ts") is not None
