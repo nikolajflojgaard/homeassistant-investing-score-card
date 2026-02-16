@@ -24,26 +24,72 @@ sections:
         show_state: false
   - type: grid
     cards:
-      - type: markdown
-        title: Top 10 Opportunities
-        content: >
-          Brug `sensor.homeassistant_investing_score_card_top_opportunities`
-          attributten `top_10` i en tabel/markdown card hvis du vil vise hele
-          ranglisten.
-      - type: entities
-        title: Top Picks (Quick View)
-        show_header_toggle: false
-        entities:
-          - entity: sensor.microsoft
-            name: Microsoft
-          - entity: sensor.johnson_johnson
-            name: Johnson & Johnson
-          - entity: sensor.alphabet
-            name: Alphabet
-          - entity: sensor.meta
-            name: Meta
-          - entity: sensor.amazon
-            name: Amazon
+      - type: heading
+        heading: Top Opportunities (Click For Details)
+      - type: grid
+        columns: 2
+        square: false
+        cards:
+          - type: button
+            entity: sensor.homeassistant_investing_score_card_top_opportunity_1
+            name: Opportunity 1
+            show_state: true
+            tap_action:
+              action: more-info
+          - type: button
+            entity: sensor.homeassistant_investing_score_card_top_opportunity_2
+            name: Opportunity 2
+            show_state: true
+            tap_action:
+              action: more-info
+          - type: button
+            entity: sensor.homeassistant_investing_score_card_top_opportunity_3
+            name: Opportunity 3
+            show_state: true
+            tap_action:
+              action: more-info
+          - type: button
+            entity: sensor.homeassistant_investing_score_card_top_opportunity_4
+            name: Opportunity 4
+            show_state: true
+            tap_action:
+              action: more-info
+          - type: button
+            entity: sensor.homeassistant_investing_score_card_top_opportunity_5
+            name: Opportunity 5
+            show_state: true
+            tap_action:
+              action: more-info
+          - type: button
+            entity: sensor.homeassistant_investing_score_card_top_opportunity_6
+            name: Opportunity 6
+            show_state: true
+            tap_action:
+              action: more-info
+          - type: button
+            entity: sensor.homeassistant_investing_score_card_top_opportunity_7
+            name: Opportunity 7
+            show_state: true
+            tap_action:
+              action: more-info
+          - type: button
+            entity: sensor.homeassistant_investing_score_card_top_opportunity_8
+            name: Opportunity 8
+            show_state: true
+            tap_action:
+              action: more-info
+          - type: button
+            entity: sensor.homeassistant_investing_score_card_top_opportunity_9
+            name: Opportunity 9
+            show_state: true
+            tap_action:
+              action: more-info
+          - type: button
+            entity: sensor.homeassistant_investing_score_card_top_opportunity_10
+            name: Opportunity 10
+            show_state: true
+            tap_action:
+              action: more-info
   - type: grid
     cards:
       - type: entities
@@ -61,4 +107,3 @@ sections:
         name: OMXC25 Valuation
         icon: mdi:finance
         vertical: true
-

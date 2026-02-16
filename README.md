@@ -30,6 +30,12 @@ Each asset includes:
 - `sensor.<name>_top_opportunities`
   - state: top-ranked asset
   - attributes: sorted `top_10` list with full details
+- `sensor.<name>_top_opportunity_1` ... `sensor.<name>_top_opportunity_10`
+  - state: `Company (Assessment)`
+  - click in dashboard to open popup (`more-info`) with:
+    - score breakdown (growth, profitability, guidance, capital strength)
+    - valuation (price, fair price, multiple ratio)
+    - financial metrics (YoY, margins, leverage)
 - `sensor.<name>_market_summary`
   - counts for undervalued/fair/overvalued
 - one sensor per asset
@@ -69,6 +75,7 @@ Style goals:
 - rounded cards and buttons (`ha-card-border-radius`)
 - light separators and borders
 - clean tile/button layout (native cards only)
+- top opportunities shown as clickable boxes with popup details
 
 ## Manual Script
 

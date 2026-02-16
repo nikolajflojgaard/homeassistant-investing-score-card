@@ -27,6 +27,8 @@ async def async_setup_entry(
 ) -> None:
     coordinator: InvestingScoreCardCoordinator = hass.data[DOMAIN][entry.entry_id]
     entities: list[SensorEntity] = [TopOpportunitiesSensor(entry, coordinator), MarketSummarySensor(entry, coordinator)]
+    for rank in range(1, 11):
+        entities.append(RankedOpportunitySensor(entry, coordinator, rank))
 
     data = coordinator.data or {}
     for asset in data.get("assets", []):
@@ -93,6 +95,63 @@ class MarketSummarySensor(BaseScoreSensor):
         data = self.coordinator.data or {}
         base.update(data.get("summary", {}))
         base["generated_at"] = data.get("generated_at")
+        return base
+
+
+class RankedOpportunitySensor(BaseScoreSensor):
+    """Dynamic ranked opportunity sensor (clickable in Lovelace)."""
+
+    _attr_has_entity_name = True
+    _attr_icon = "mdi:star-circle-outline"
+
+    def __init__(self, entry: ConfigEntry, coordinator: InvestingScoreCardCoordinator, rank: int) -> None:
+        super().__init__(entry, coordinator)
+        self._rank = rank
+        self._attr_name = f"Top Opportunity {rank}"
+        self._attr_unique_id = f"{entry.entry_id}_top_opportunity_{rank}"
+
+    def _item(self) -> dict[str, Any]:
+        top = (self.coordinator.data or {}).get("top_opportunities", [])
+        idx = self._rank - 1
+        if 0 <= idx < len(top):
+            return top[idx]
+        return {}
+
+    @property
+    def native_value(self) -> str:
+        item = self._item()
+        if not item:
+            return "N/A"
+        return f"{item.get('name', 'N/A')} ({item.get('assessment', 'N/A')})"
+
+    @property
+    def extra_state_attributes(self) -> dict[str, Any]:
+        base = dict(super().extra_state_attributes or {})
+        item = self._item()
+        base.update(
+            {
+                "rank": self._rank,
+                "company": item.get("name"),
+                "ticker": item.get("ticker"),
+                "index": item.get("index"),
+                "assessment": item.get("assessment"),
+                "price": item.get("price"),
+                "fair_price": item.get("fair_price"),
+                "valuation_gap_pct": item.get("valuation_gap_pct"),
+                "valuation_model": item.get("valuation_model"),
+                "actual_multiple": item.get("actual_multiple"),
+                "fair_multiple": item.get("fair_multiple"),
+                "multiple_ratio": item.get("multiple_ratio"),
+                "score_total": item.get("score_total"),
+                "grade": item.get("grade"),
+                "opportunity_score": item.get("opportunity_score"),
+                "components": item.get("components", {}),
+                "metrics": item.get("metrics", {}),
+                "latest_period": item.get("latest_period"),
+                "prior_period": item.get("prior_period"),
+                "generated_at": (self.coordinator.data or {}).get("generated_at"),
+            }
+        )
         return base
 
 
