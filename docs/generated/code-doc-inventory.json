@@ -1,0 +1,461 @@
+{
+  "counts": {
+    "deployments": 0,
+    "entrypoints": 0,
+    "files": 55,
+    "flows": 0,
+    "frameworks": 0,
+    "interfaces": 1,
+    "manifests": 2,
+    "routes": 0
+  },
+  "deployments": [],
+  "entrypoints": [],
+  "files": [
+    {
+      "path": ".gitignore",
+      "size": 78,
+      "suffix": "",
+      "tags": []
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size": 127,
+      "suffix": ".md",
+      "tags": []
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "size": 310,
+      "suffix": ".md",
+      "tags": []
+    },
+    {
+      "path": "LICENSE",
+      "size": 1057,
+      "suffix": "",
+      "tags": []
+    },
+    {
+      "path": "Makefile",
+      "size": 157,
+      "suffix": "",
+      "tags": [
+        "manifest"
+      ]
+    },
+    {
+      "path": "README.md",
+      "size": 3802,
+      "suffix": ".md",
+      "tags": []
+    },
+    {
+      "path": "SECURITY.md",
+      "size": 176,
+      "suffix": ".md",
+      "tags": []
+    },
+    {
+      "path": "code-docs.yml",
+      "size": 292,
+      "suffix": ".yml",
+      "tags": []
+    },
+    {
+      "path": "dark_icon.png",
+      "size": 4677,
+      "suffix": ".png",
+      "tags": []
+    },
+    {
+      "path": "dark_logo.png",
+      "size": 4680,
+      "suffix": ".png",
+      "tags": []
+    },
+    {
+      "path": "hacs.json",
+      "size": 182,
+      "suffix": ".json",
+      "tags": []
+    },
+    {
+      "path": "icon.png",
+      "size": 4575,
+      "suffix": ".png",
+      "tags": []
+    },
+    {
+      "path": "logo.png",
+      "size": 4566,
+      "suffix": ".png",
+      "tags": []
+    },
+    {
+      "path": "pyproject.toml",
+      "size": 127,
+      "suffix": ".toml",
+      "tags": [
+        "manifest"
+      ]
+    },
+    {
+      "path": "requirements-dev.txt",
+      "size": 73,
+      "suffix": ".txt",
+      "tags": []
+    },
+    {
+      "path": "scorecard.py",
+      "size": 8067,
+      "suffix": ".py",
+      "tags": []
+    },
+    {
+      "path": "valuation_assessment.py",
+      "size": 11417,
+      "suffix": ".py",
+      "tags": []
+    },
+    {
+      "path": ".devcontainer/devcontainer.json",
+      "size": 426,
+      "suffix": ".json",
+      "tags": []
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "size": 131,
+      "suffix": ".md",
+      "tags": []
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "size": 119,
+      "suffix": ".yml",
+      "tags": []
+    },
+    {
+      "path": ".github/release-drafter.yml",
+      "size": 475,
+      "suffix": ".yml",
+      "tags": []
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.yml",
+      "size": 370,
+      "suffix": ".yml",
+      "tags": []
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.yml",
+      "size": 244,
+      "suffix": ".yml",
+      "tags": []
+    },
+    {
+      "path": ".github/workflows/code-docs.yml",
+      "size": 583,
+      "suffix": ".yml",
+      "tags": []
+    },
+    {
+      "path": "custom_components/investing_score_card/__init__.py",
+      "size": 1657,
+      "suffix": ".py",
+      "tags": []
+    },
+    {
+      "path": "custom_components/investing_score_card/api.py",
+      "size": 785,
+      "suffix": ".py",
+      "tags": [
+        "interface"
+      ]
+    },
+    {
+      "path": "custom_components/investing_score_card/config_flow.py",
+      "size": 4930,
+      "suffix": ".py",
+      "tags": []
+    },
+    {
+      "path": "custom_components/investing_score_card/const.py",
+      "size": 818,
+      "suffix": ".py",
+      "tags": []
+    },
+    {
+      "path": "custom_components/investing_score_card/coordinator.py",
+      "size": 2573,
+      "suffix": ".py",
+      "tags": []
+    },
+    {
+      "path": "custom_components/investing_score_card/dark_icon.png",
+      "size": 4677,
+      "suffix": ".png",
+      "tags": []
+    },
+    {
+      "path": "custom_components/investing_score_card/dark_logo.png",
+      "size": 4680,
+      "suffix": ".png",
+      "tags": []
+    },
+    {
+      "path": "custom_components/investing_score_card/diagnostics.py",
+      "size": 1111,
+      "suffix": ".py",
+      "tags": []
+    },
+    {
+      "path": "custom_components/investing_score_card/engine.py",
+      "size": 22123,
+      "suffix": ".py",
+      "tags": []
+    },
+    {
+      "path": "custom_components/investing_score_card/entity.py",
+      "size": 652,
+      "suffix": ".py",
+      "tags": []
+    },
+    {
+      "path": "custom_components/investing_score_card/icon.png",
+      "size": 4575,
+      "suffix": ".png",
+      "tags": []
+    },
+    {
+      "path": "custom_components/investing_score_card/logo.png",
+      "size": 4566,
+      "suffix": ".png",
+      "tags": []
+    },
+    {
+      "path": "custom_components/investing_score_card/manifest.json",
+      "size": 547,
+      "suffix": ".json",
+      "tags": []
+    },
+    {
+      "path": "custom_components/investing_score_card/sensor.py",
+      "size": 11517,
+      "suffix": ".py",
+      "tags": []
+    },
+    {
+      "path": "custom_components/investing_score_card/services.py",
+      "size": 1300,
+      "suffix": ".py",
+      "tags": []
+    },
+    {
+      "path": "custom_components/investing_score_card/services.yaml",
+      "size": 295,
+      "suffix": ".yaml",
+      "tags": []
+    },
+    {
+      "path": "custom_components/investing_score_card/storage.py",
+      "size": 1505,
+      "suffix": ".py",
+      "tags": []
+    },
+    {
+      "path": "custom_components/investing_score_card/strings.json",
+      "size": 985,
+      "suffix": ".json",
+      "tags": []
+    },
+    {
+      "path": "custom_components/investing_score_card/translations/en.json",
+      "size": 985,
+      "suffix": ".json",
+      "tags": []
+    },
+    {
+      "path": "data/companies_scored.csv",
+      "size": 5354,
+      "suffix": ".csv",
+      "tags": []
+    },
+    {
+      "path": "data/companies_scored.md",
+      "size": 3380,
+      "suffix": ".md",
+      "tags": []
+    },
+    {
+      "path": "data/companies_template.csv",
+      "size": 4356,
+      "suffix": ".csv",
+      "tags": []
+    },
+    {
+      "path": "data/companies_valuation.csv",
+      "size": 8115,
+      "suffix": ".csv",
+      "tags": []
+    },
+    {
+      "path": "data/companies_valuation.md",
+      "size": 2339,
+      "suffix": ".md",
+      "tags": []
+    },
+    {
+      "path": "data/weekly_snapshot.json",
+      "size": 42594,
+      "suffix": ".json",
+      "tags": []
+    },
+    {
+      "path": "scripts/bump_version.py",
+      "size": 859,
+      "suffix": ".py",
+      "tags": []
+    },
+    {
+      "path": "scripts/enable_ci.sh",
+      "size": 394,
+      "suffix": ".sh",
+      "tags": []
+    },
+    {
+      "path": "scripts/release.sh",
+      "size": 385,
+      "suffix": ".sh",
+      "tags": []
+    },
+    {
+      "path": "scripts/rename_domain.py",
+      "size": 3534,
+      "suffix": ".py",
+      "tags": []
+    },
+    {
+      "path": "scripts/update_weekly_snapshot.py",
+      "size": 1826,
+      "suffix": ".py",
+      "tags": []
+    },
+    {
+      "path": "scripts/validate.sh",
+      "size": 1514,
+      "suffix": ".sh",
+      "tags": []
+    }
+  ],
+  "flows": [],
+  "frameworks": [],
+  "interfaces": [
+    {
+      "path": "custom_components/investing_score_card/api.py",
+      "size": 785,
+      "suffix": ".py",
+      "tags": [
+        "interface"
+      ]
+    }
+  ],
+  "manifests": [
+    {
+      "path": "Makefile",
+      "size": 157,
+      "suffix": "",
+      "tags": [
+        "manifest"
+      ]
+    },
+    {
+      "path": "pyproject.toml",
+      "size": 127,
+      "suffix": ".toml",
+      "tags": [
+        "manifest"
+      ]
+    }
+  ],
+  "repo": "homeassistant-investing-score-card",
+  "root": ".",
+  "routes": [],
+  "tree": {
+    ".devcontainer": {
+      "devcontainer.json": null
+    },
+    ".github": {
+      "ISSUE_TEMPLATE": {
+        "bug_report.yml": null,
+        "feature_request.yml": null
+      },
+      "PULL_REQUEST_TEMPLATE.md": null,
+      "dependabot.yml": null,
+      "release-drafter.yml": null,
+      "workflows": {
+        "code-docs.yml": null
+      }
+    },
+    ".gitignore": null,
+    "CHANGELOG.md": null,
+    "CONTRIBUTING.md": null,
+    "LICENSE": null,
+    "Makefile": null,
+    "README.md": null,
+    "SECURITY.md": null,
+    "code-docs.yml": null,
+    "custom_components": {
+      "investing_score_card": {
+        "__init__.py": null,
+        "api.py": null,
+        "config_flow.py": null,
+        "const.py": null,
+        "coordinator.py": null,
+        "dark_icon.png": null,
+        "dark_logo.png": null,
+        "diagnostics.py": null,
+        "engine.py": null,
+        "entity.py": null,
+        "icon.png": null,
+        "logo.png": null,
+        "manifest.json": null,
+        "sensor.py": null,
+        "services.py": null,
+        "services.yaml": null,
+        "storage.py": null,
+        "strings.json": null,
+        "translations": {
+          "en.json": null
+        }
+      }
+    },
+    "dark_icon.png": null,
+    "dark_logo.png": null,
+    "data": {
+      "companies_scored.csv": null,
+      "companies_scored.md": null,
+      "companies_template.csv": null,
+      "companies_valuation.csv": null,
+      "companies_valuation.md": null,
+      "weekly_snapshot.json": null
+    },
+    "hacs.json": null,
+    "icon.png": null,
+    "logo.png": null,
+    "pyproject.toml": null,
+    "requirements-dev.txt": null,
+    "scorecard.py": null,
+    "scripts": {
+      "bump_version.py": null,
+      "enable_ci.sh": null,
+      "release.sh": null,
+      "rename_domain.py": null,
+      "update_weekly_snapshot.py": null,
+      "validate.sh": null
+    },
+    "valuation_assessment.py": null
+  },
+  "truncated": false
+}
